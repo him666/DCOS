@@ -48,4 +48,7 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
   url: <%= ENV['DATABASE_URL'] %>
