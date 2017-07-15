@@ -49,8 +49,6 @@ test:
 #
 production:
   <<: *default
- # database: <%= ENV['DB_NAME_PRODUCTION']>
- # username: <%= ENV['DB_USER_PRODUCTION']>
- # password: <%= ENV['DB_PASSWORD_PRODUCTION'] %>
- <%= puts ENV['CLEARDB_DATABASE_URL'] %>
-  url: <%= ENV['CLEARDB_DATABASE_URL'] %>
+  database: DCOS_production
+  username: DCOS
+  password: <%= ENV['DCOS_DATABASE_PASSWORD'] %>
