@@ -49,6 +49,7 @@ test:
 #
 production:
   <<: *default
-  database: <%= ENV['DB_NAME_PRODUCTION']>
-  username: <%= ENV['DB_USER_PRODUCTION']>
-  password: <%= ENV['DB_PASSWORD_PRODUCTION'] %>
+ # database: <%= ENV['DB_NAME_PRODUCTION']>
+ # username: <%= ENV['DB_USER_PRODUCTION']>
+ # password: <%= ENV['DB_PASSWORD_PRODUCTION'] %>
+  url: <%= ENV['DB_PROD_URL']>
