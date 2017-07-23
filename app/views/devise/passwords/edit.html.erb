@@ -8,7 +8,7 @@
   <div class="field">
     <%= f.label :contraseña, "Nueva contraseña" %><br />
     <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em><br />
+      <em>(<%= @minimum_password_length %> caracteres mínimo!)</em><br />
     <% end %>
     <%= f.password_field :password, autofocus: true, autocomplete: "off" %>
   </div>
