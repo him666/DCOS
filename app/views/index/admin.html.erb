@@ -1,8 +1,8 @@
 <div class="container-fluid2">
   <h1>Administrar Privilegios</h1>
 
-  <div class="table-responsive">
-    <table class="rwd-table" align="center">
+
+    <table class="resp2-table" align="center">
       <tr>
         <th>Email</th>
         <th>Privilegio</th>
@@ -15,7 +15,7 @@
             <td> <%= u.email %></td>
             <td><%= u.privileges.first.nil? ? 'nil' : u.privileges.first.level %></td>
             <td>
-              <%= button_to 'volver admin',
+              <%= button_to 'admin',
                             {:controller => 'index',
                              :action => 'permission',
                              :email => u.email,
@@ -26,7 +26,7 @@
                             {:method => :post, class: 'btn2'} %>
             </td>
             <td>
-              <%= button_to 'volver  común',
+              <%= button_to 'común',
                             {:controller => 'index',
                              :action => 'permission',
                              :email => u.email,
@@ -42,7 +42,7 @@
     </table>
   </div>
   <%= link_to('Regresar', index_home_path) %>
-</div>
+
 
 
 
