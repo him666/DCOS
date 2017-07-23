@@ -1,5 +1,8 @@
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
-<h2>Aplicacion en construccion</h2>
-<h1>Creada Por Ing. Héctor Aréchiga</h1>
+
+<% if current_user.privileges.first.level == 'root' %>
+    <%= link_to('administrar cuentas',index_admin_path)  %>
+<% end %>
+<br/>
 <%= link_to('Cerrar sesión', destroy_user_session_path, :method => :delete) %>
