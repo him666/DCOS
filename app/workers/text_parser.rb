@@ -78,7 +78,6 @@ class TextParser
       # pp subsections
 
 
-
       index = index + 1
       puts '------------------------'
     end
@@ -89,8 +88,12 @@ class TextParser
 
   end
 
-  def paragraph(subsection, paragraph)
-
+  def paragraph(subsection, paragraphs)
+    paragraphs.each do |p|
+      ct = subsection.content.new
+      ct.unique_id = SecureRandom.uuid
+      ct.code  = p
+    end
   end
 
   def table(index, doc)

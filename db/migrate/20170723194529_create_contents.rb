@@ -5,6 +5,7 @@ class CreateContents < ActiveRecord::Migration[5.0]
       t.string :unique_id
       t.string :extra
       t.string :title
+      t.string :oftype
       t.references :subsection, foreign_key: true
 
       t.timestamps
