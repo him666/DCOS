@@ -5,6 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   has_many :privileges, dependent: :destroy
   validates :email, presence: true
-
+  validates :email, uniqueness: true
 
 end
