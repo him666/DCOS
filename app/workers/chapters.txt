@@ -1,0 +1,138 @@
+chapter1. INTRODUCCIÓN
+
+xsection1.1 INTRO
+subsection1.1.1 INTRO
+
+
+chapter2. OBJETIVOS DEL ÁREA NATURAL PROTEGIDA
+
+xsection2.1 OBJETIVOS DEL ÁREA NATURAL PROTEGIDA
+subsection2.1.1 OBJETIVOS DEL ÁREA NATURAL PROTEGIDA
+
+
+chapter3. OBJETIVOS DEL PROGRAMA DE MANEJO
+
+xsection3.1 OBJETIVOS DEL PROGRAMA DE MANEJO
+subsection3.1.1 OBJETIVOS DEL PROGRAMA DE MANEJO
+
+
+chapter4. DESCRIPCIÓN DEL ÁREA NATURAL PROTEGIDA
+
+xsection4.1 Localización y Límites
+subsection4.1.1 Localización y Límites
+
+xsection4.2 Características Físico-Geográficas
+subsection4.2.1 Características Físico-Geográficas
+
+xsection4.3 Características Biológicas
+subsection4.3.1 Características Biológicas
+
+xsection4.4 Contexto Demográfico, Económico y Social
+subsection4.4.1 Contexto Demográfico, Económico y Social
+
+xsection4.5 Contexto Arqueológico, Histórico y Cultural
+subsection4.5.1 Contexto Arqueológico, Histórico y Cultural
+
+xsection4.6 Normas Oficiales Mexicanas
+subsection4.6.1	Normas Oficiales Mexicanas
+
+
+chapter5. DIAGNÓSTICO Y PROBLEMÁTICA
+
+xsection5.1 DIAGNÓSTICO Y PROBLEMÁTICA
+subsection5.1.1 DIAGNÓSTICO Y PROBLEMÁTICA
+
+
+chapter6. SUBPROGRAMAS DE CONSERVACIÓN
+
+xsection6.1 SUBPROGRAMA DE PROTECCIÓN
+subsection6.1.1. Componente de inspección y vigilancia
+subsection6.1.2. Componente de prevención, control y combate de incendios y contingencias ambientales
+subsection6.1.3 Componente de preservación e integridad de áreas núcleo, frágiles y sensibles
+subsection6.1.4. Componente de protección contra especies invasoras y control de especies nocivas
+subsection6.1.5. Componente de mitigación y adaptación al cambio climático
+
+xsection6.2 SUBPROGRAMA DE MANEJO
+subsection6.2.1 Componente de actividades productivas alternativas
+subsection6.2.2 Componente de manejo y uso sustentable de vida silvestre	
+subsection6.2.3 Componente de Manejo y Uso Sustentable de Pesquerías
+subsection6.2.4 Componente de patrimonio arqueológico, histórico y cultural
+subsection6.2.5 Componente de uso público, turismo y recreación al aire libre
+
+xsection6.3 SUBPROGRAMA RESTAURACIÓN
+subsection6.3.1. Componente conectividad y ecología del paisaje
+subsection6.3.2. Componente de Recuperación de Especies en Riesgo y Emblemáticas
+subsection6.3.3. Componente conservación de agua y suelos
+subsection6.3.4. Componente restauración de ecosistemas
+
+xsection6.4 SUBPROGRAMA DE CONOCIMIENTO	
+subsection6.4.1 Componente fomento a la investigación y generación de conocimiento
+subsection6.4.2 Componente inventarios, líneas base y monitoreo ambiental y socioeconómico
+subsection6.4.3 Componente sistemas de información
+
+xsection6.5 SUBPROGRAMA DE CULTURA
+subsection6.5.1 Componente de participación
+subsection6.5.2 Componente de educación para la conservación
+subsection6.5.3 Componente de capacitación para el desarrollo sostenible
+subsection6.5.4 Componente de comunicación, difusión e interpretación ambiental
+
+xsection6.6 SUBPROGRAMA DE GESTIÓN
+subsection6.6.1 Componente de administración y operación
+subsection6.6.2 Componente de transversalidad y concertación regional y sectorial
+subsection6.6.3 Componente de cooperación y designaciones internacionales
+subsection6.6.4 Componente de infraestructura, señalización y obra pública
+subsection6.6.5 Componente de procuración de recursos e incentivos
+subsection6.6.6 Componente de recursos humanos y profesionalización
+
+
+chapter7. ZONIFICACIÓN Y SUBZONIFICACIÓN
+
+xsection7.1 Criterios de Subzonificación
+subsection7.1.1 Criterios de Subzonificación
+
+xsection7.2 Metodología
+subsection7.2.1 Metodología
+
+xsection7.3 SUBZONAS Y POLÍTICAS DE MANEJO
+subsection7.3.a)	Subzona de Uso Restringido Boca Iglesias
+subsection7.3.b)	Subzona de Uso Restringido Chacmochuch
+subsection7.3.c)	Subzona de Uso Restringido Marino Xcacel-Xcacelito
+subsection7.3.d)	Subzona de Uso Restringido Profundo
+subsection7.3.1. Polígono Colinas Submarinas de Colmer
+subsection7.3.2. Polígono Banco Chinchorro Profundo
+subsection7.3.3.- Polígono Cordillera Submarina Caimán
+subsection7.3.e)	Subzona de Preservación Humedales de Salsipuedes
+subsection7.3.f)	Subzona de Preservación Profunda Talud Puerto Morelos-Tiburón Ballena
+subsection7.3.g)	Subzona de Preservación Arrowsmith	
+subsection7.3.h)	Subzona de Preservación Playa Xcacel
+subsection7.3.i)	Subzona de Preservación Talud de Sian ka’an
+subsection7.3.j)	Subzona de Preservación Uaymil- Xahuayxol
+subsection7.3.k)	Subzona de Aprovechamiento Sustentable de los Recursos Naturales Costa Norte
+subsection7.3.l)	Subzona de Aprovechamiento Sustentable de los Recursos Naturales Tiburón Ballena
+subsection7.3.m)	Subzona de Aprovechamiento Sustentable de los Recursos Naturales Laguna Chacmochuch
+subsection7.3.n)	Subzona de Aprovechamiento Sustentable de los Recursos Naturales Isla Blanca
+subsection7.3.o)	Subzona de Aprovechamiento Sustentable de los Recursos Naturales Tiburón Toro
+subsection7.3.p)	Subzona de Aprovechamiento Sustentable de los Recursos Naturales Refugio Akumal Franja Marino Costera
+subsection7.3.q)	Subzona de Aprovechamiento Sustentable de los Recursos Naturales Refugio Bahía de Akumal
+subsection7.3.r)	Subzona de Aprovechamiento Sustentable de los Recursos Naturales Riviera Maya y Mahahual
+subsection7.3.s)	Subzona de Aprovechamiento Sustentable de los Ecosistemas Marinos
+subsection7.3.t)	Subzona de Uso Público Playa del Carmen y Tulum-Sian Ka’an
+subsection7.3.u)	Subzona de Aprovechamiento Especial Extracción de Arena
+
+
+chapter8. REGLAS ADMINISTRATIVAS
+
+xsection8.1 REGLAS ADMINISTRATIVAS
+subsection8.1.1 REGLAS ADMINISTRATIVAS
+
+
+chapter9. BIBLIOGRAFÍA
+
+xsection9.1 BIBLIOGRAFIA
+subsection9.1.1 Bibliografia
+
+
+chapter10. ANEXOS
+
+xsection10.1 ANEXOS
+subsection10.1.1 ANEXOS
