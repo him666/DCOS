@@ -1,43 +1,48 @@
-<h1>Administrar Privilegios</h1>
+<div class="container-fluid2">
+  <h1>Administrar Privilegios</h1>
 
-<table class="rwd-table">
-  <tr>
-    <th>Email</th>
-    <th>Privilegio</th>
-    <th>Ascender</th>
-    <th>Descender</th>
-  </tr>
-  <% @users.each do |u| %>
+
+    <table class="resp2-table" align="center">
       <tr>
-        <td> <%= u.email %></td>
-        <td><%= u.privileges.first.nil? ? 'nil' : u.privileges.first.level %></td>
-        <td>
-          <%= button_to 'volver admin',
-                        {:controller => 'index',
-                         :action => 'permission',
-                         :email => u.email,
-                         :user_id => u.id,
-                         :permission => 'root',
-                         :name => 'admin'
-                        },
-                        {:method => :post, class: 'btn2'} %>
-        </td>
-        <td>
-          <%= button_to 'volver  común',
-                        {:controller => 'index',
-                         :action => 'permission',
-                         :email => u.email,
-                         :user_id => u.id,
-                         :permission => 'normal',
-                         :name => 'commoner'
-                        },
-                        {:method => :post, class: 'btn2'} %>
-        </td>
+        <th>Email</th>
+        <th>Privilegio</th>
+        <th>Ascender</th>
+        <th>Descender</th>
       </tr>
-  <% end %>
-</table>
+      <% @users.each do |u| %>
 
-<%= link_to('Regresar', index_home_path) %>
+          <tr>
+            <td> <%= u.email %></td>
+            <td><%= u.privileges.first.nil? ? 'nil' : u.privileges.first.level %></td>
+            <td>
+              <%= button_to 'admin',
+                            {:controller => 'index',
+                             :action => 'permission',
+                             :email => u.email,
+                             :user_id => u.id,
+                             :permission => 'root',
+                             :name => 'admin'
+                            },
+                            {:method => :post, class: 'btn2'} %>
+            </td>
+            <td>
+              <%= button_to 'común',
+                            {:controller => 'index',
+                             :action => 'permission',
+                             :email => u.email,
+                             :user_id => u.id,
+                             :permission => 'normal',
+                             :name => 'commoner'
+                            },
+                            {:method => :post, class: 'btn2'} %>
+            </td>
+          </tr>
+
+      <% end %>
+    </table>
+  </div>
+  <%= link_to('Regresar', index_home_path) %>
+
 
 
 
