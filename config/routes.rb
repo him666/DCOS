@@ -5,5 +5,8 @@ Rails.application.routes.draw do
   get 'index/home'
   get 'index/admin'
   post 'index/permission'
+  get 'index/document'
+  post 'index/document'
+  get 'index/data'
 end
 
