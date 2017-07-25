@@ -29,6 +29,10 @@
     <% end %>
     <% @contents.each do |ct| %>
     <%= "<p>#{ct.code}</p>".html_safe if ct.oftype == 'text' %>
+
+    <%= image_tag(ct.code,alt: ct.extra ,data: { title: ct.title }) if ct.oftype == 'image'%>
+    <%= "#{ct.code}".html_safe if ct.oftype == 'table' %>
+        <br>
     <% end %>
   </div>
 
