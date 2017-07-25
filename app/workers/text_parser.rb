@@ -81,15 +81,16 @@ class TextParser
 
   end
 
-  def image(subsection,paragraph)
+  def image(subsection, paragraph)
     strings = paragraph.split(/\n/)
     ct = subsection.content.new
-    ct.title = strings[0]
-    ct.code = strings[1]
-    ct.extra = strings[2]
+    ct.title = strings[0] unless strings[0] == '----'
+    ct.code = strings[1].downcase + '.jpeg'
+    ct.extra = strings[2] unless strings[2] == '----'
     ct.unique_id = SecureRandom.uuid
     ct.oftype = 'image'
-    ct.save
+    puts ct.code
+    #ct.save
   end
 
   def paragraph(subsection, paragraph)
@@ -97,38 +98,63 @@ class TextParser
     ct.unique_id = SecureRandom.uuid
     ct.code = paragraph
     ct.oftype = 'text'
-    ct.save
+    puts paragraph
+    #ct.save
   end
 
-  def table(index, doc)
-    doc.tables[index]
+  def table(subsection, paragraph, doc)
+    ct = subsection.contents.new
+    phrases = paragraph.split(/\n/)
+    index = phrases[1].gsub('Table').to_i
+    title = phrases[0] unless phrases[0] == '----'
+    extra = phrases[2] unless phrases[0] == '----'
+    table = doc.tables[index]
+    code = '<table>'
+    table.rows.each do |row| # Row-based iteration
+      code = code + '<tr>'
+      row.cells.each do |cell|
+        puts cell.text
+        code = "#{code}<td>#{cell.text}</td>"
+      end
+      code = code + '</tr>'
+    end
+    puts code
+    ct.oftype = 'table'
+    ct.title = title
+    ct.code = code
+    ct.extra = extra
+    ct.unique_id = SecureRandom.uuid
+    #ct.save
   end
 
-  def paragraph_parser
+  def paragraph_parser(doc)
     file = File.open('./app/workers/paragraphs.txt', 'rb')
     content = file.read.force_encoding('utf-8')
     paragraphs = content.split(/\n{3}/)
     paragraphs.each do |ph|
-      puts ph[0..5]
+
+      contents = ph.split(/\n{2}/)
+
+      subsection = Subsection.where(order: contents.first).first
+
+      contents[1..-1].each do |ct|
+        table(subsection, ct, doc) if ct.include?('Table')
+        image(subsection, ct) if ct.include?('Image')
+        paragraph(subsection, ct)
+      end
     end
   end
 
   def run
     docu = Document.first
     #file_parser(docu)
-    paragraph_parser
     doc = Docx::Document.open('./app/workers/pmcm.docx')
-    puts doc.tables.count
-
-    puts ENV['SENDMAIL_USER']
-
-# puts doc.tables[1].methods
- doc.tables[59].rows.each do |row| # Row-based iteration
-   row.cells.each do |cell|
-      puts cell.text
-   end
- end
+    paragraph_parser(doc)
+    #puts doc.tables.count
+    #puts ENV['SENDMAIL_USER']
+    # puts doc.tables[1].methods
   end
 end
+
 t = TextParser.new
 t.run

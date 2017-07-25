@@ -553,7 +553,7 @@ La porción norte de Quintana Roo es posiblemente la que mantiene la mayor frecu
 En años pasados los huracanes han afectado severamente las comunidades vegetales del área, dejando grandes extensiones de vegetación muerta y seca, produciendo el combustible ideal para incendios forestales (Merediz, et al., 2006). Las tormentas y huracanes afectan a todos los ecosistemas, provocan inundaciones, intrusión salina y migración de fauna silvestre, así como alta mortandad de crías y juveniles de diversas especies.
 
 Huracanes que han impactado Quintana Roo de 1988 a 2017
-Table8
+Table9
 Fuente: Elaborado con información histórica del Servicio Meteorológico Nacional.
 
 Por su parte, el huracán Dean azotó las costas del sureste de México en 2007, como un huracán categoría 5 en la escala Saffir-Simpson causando un severo daño en la infraestructura y biodiversidad, produciendo efectos severos. Como consecuencia de estas perturbaciones se detectaron importantes áreas con pedacería y colonias sueltas y erosionadas en los arrecifes, así como grandes depósitos de arena que cubrían en ocasiones la totalidad del arrecife dejando sólo la parte de algunas gorgonias al descubierto.
@@ -603,7 +603,7 @@ Presencia y coordinación institucional
 El manejo de los recursos naturales en la Reserva de la Biosfera Caribe Mexicano recae por atribuciones directamente en la CONANP. Sin embargo, para hacer efectivo y eficiente este manejo es necesario el apoyo, la coordinación y la presencia de distintas autoridades de los tres órdenes de gobierno, así como una participación activa de la sociedad. A continuación se presenta una tabla que relaciona las instancias o dependencias de coordinación y los temas de interés.
 
 ----
-Table9
+Table10
 ----
 
 6.1.1
@@ -652,7 +652,7 @@ Contar con un mapa de ilícitos, por tipo y frecuencia, a mediano plazo.
 Obtener indicadores del grado de cumplimiento de las medidas de regulación aplicables a largo plazo.}
 
 ----
-Table10
+Table11
 ----
 
 6.1.2
@@ -675,7 +675,7 @@ Atender y/o dar seguimiento al 100% de casos de contingencias por incendios y co
 Contar en el mediano plazo, con un protocolo o manual interno sobre manejo de contingencias y mitigación de riesgos para el ANP
 
 ----
-Table11
+Table12
 *Las actividades se presentan en letras cursivas.
 
 
@@ -703,7 +703,7 @@ Identificar las necesidades de preservación para estas áreas en el mediano pla
 Contar con información sobre la intensidad de uso en estas áreas, para proponer acciones que mitiguen el impacto por actividades antropogénicas, en el mediano plazo.
 
 ----
-Table12
+Table13
 *Las actividades se presentan en letra cursiva.
 
 
@@ -726,7 +726,7 @@ Contar a mediano plazo con un diagnóstico de las especies nocivas que sean pote
 Implementar a mediano plazo un programa de prevención y control de especies nocivas que incluya la participación de la comunidad, organizaciones sociales y los tres órdenes de gobierno.
 
 ----
-Table13
+Table14
 *Las actividades se presentan en letra cursiva.
 
 
@@ -754,7 +754,7 @@ Participar permanentemente en la agenda para la adaptación al cambio climático
 Desarrollar en mediano plazo la agenda para la adaptación al cambio climático en el ANP y su zona de influencia.
 
 ----
-Table14
+Table15
 * Las actividades se presentan en letra cursiva.
 
 
@@ -796,7 +796,7 @@ Contar con una planeación estratégica anual que guíe la selección de proyect
 Impulsar la aplicación de tecnologías sustentables en las actividades productivas. 
 
 ----
-Table15
+Table16
 *Las actividades se presentan en letra cursiva.
 
 6.2.2
@@ -817,7 +817,7 @@ Contar con un padrón de actividades y permisionarios que desarrollan actividade
 Participar en la totalidad de planes de manejo de aprovechamiento no extractivo de vida silvestre que se presenten.
 
 ----
-Table16
+Table17
 *Las actividades se presentan en letra cursiva.
 
 
@@ -843,7 +843,7 @@ Contar a corto plazo con un padrón de pescadores cooperativados e independiente
 Realizar una planeación anual de los recorridos de vigilancia y operativos coordinados con otras dependencias en materia de supervisión de la actividad pesquera.
 
 ----
-Table17
+Table18
 * Las actividades se presentan en letra cursiva.
 
 
@@ -862,7 +862,7 @@ Metas y resultados esperados
 Contar a mediano plazo, con una estrategia de conservación de los sitios arqueológicos y pecios en colaboración con el INAH.
 
 ----
-Table18
+Table19
 * Las actividades se presentan en letra cursiva.
 
 
@@ -889,7 +889,7 @@ Lograr en el corto plazo, que los prestadores de servicios turísticos obtengan 
 Diseñar y gestionar a mediano plazo un sistema de señalización marina y terrestre en la Reserva de la Biosfera.
 
 ----
-Table19
+Table20
 *Las actividades se presentan en letra cursiva
 
 
@@ -928,7 +928,7 @@ Contar con un sistema de información geográfico en el mediano plazo, que permi
 Contar con medidas de prevención en el mediano plazo, que sirvan de base para la toma de decisiones en la RBCM.
 
 ----
-Table20
+Table21
 *Las actividades se presentan en letra cursiva
 
 
@@ -951,7 +951,7 @@ Contar con un listado de las especies en riesgo y de importancia ecológica para
 Contar con un amplio acervo de información actualizado sobre el conocimiento biológico, ecológico y conductual de las especies con base en los distintos ecosistemas, ambientes y características ecológicas que se presentan en la Reserva.
 
 ----
-Table21
+Table22
 *Las actividades se presentan en letra cursiva
 
 
@@ -977,7 +977,7 @@ Fomentar la realización de al menos un estudio o diagnóstico sobre el estado a
 Desarrollar un plan de acción en colaboración con organizaciones y los diferentes órdenes de gobierno con medidas necesarias para prevenir la contaminación y alteración de las condiciones naturales del agua y suelo dentro de la Reserva y en la zona de influencia
 
 ----
-Table22
+Table23
 *Las actividades se presentan en letra cursiva
 
 
@@ -1001,7 +1001,7 @@ Meta y resultado esperado
 Implementar de manera permanente, los mecanismos necesarios que permitan recuperar áreas perturbadas por algún tipo de impacto.
 
 ----
-Table23
+Table24
 *Las actividades se presentan en letra cursiva
 
 
@@ -1042,7 +1042,7 @@ Contar en el corto plazo, con un diagnóstico de las necesidades prioritarias de
 Promover y apoyar al menos un proyecto de investigación por año.
 
 ----
-Table24
+Table25
 *Las actividades se presentan en letra cursiva
 
 
@@ -1067,7 +1067,7 @@ Promover anualmente entre las instituciones académicas la realización de monit
 Contar en el corto plazo con la identificación de las especies, áreas o indicadores prioritarios que requieran monitoreo.
 
 ----
-Table25
+Table26
 *Las actividades se presentan en letra cursiva
 
 
@@ -1086,7 +1086,7 @@ Establecer en el corto plazo, un sistema de información geográfica como una he
 Contar en el mediano plazo, con una base de datos ambiental, social y económica.
 
 ----
-Table26
+Table27
 *Las actividades se presentan en letra cursiva
 
 
@@ -1131,7 +1131,7 @@ Contar con un punto de atención ciudadana donde se reciban y atiendan de manera
 Contar en el corto plazo, con la participación de la sociedad en programas de vigilancia comunitaria o proyectos de conservación.
 
 ----
-Table27
+Table28
 *Las actividades se presentan en letra cursiva
 
 
@@ -1154,7 +1154,7 @@ Implementar una programación anual de actividades de educación ambiental y cul
 Involucrar por lo menos a una organización o institución gubernamental, privada o de la sociedad civil en las actividades de educación ambiental que se realicen.
 
 ----
-Table28
+Table29
 *Las actividades se presentan en letra cursiva
 
 
@@ -1176,7 +1176,7 @@ Contar a mediano plazo con un catálogo de cursos de capacitación para el desar
 Establecer sinergias con instituciones académicas, gubernamentales y organizaciones sociales que realizan capacitaciones en materia turística, pesquera y sobre el aprovechamiento sustentable de los recursos naturales.
 
 ----
-Table29
+Table30
 *Las actividades se presentan en letra cursiva
 
 
@@ -1202,7 +1202,7 @@ Contar a corto plazo, con una página de Internet o red social sobre la Reserva 
 Contar de manera permanente con campañas de difusión para la promoción del patrimonio natural del ANP.
 
 ----
-Table30
+Table31
 *Las actividades se presentan en letra cursiva
 
 
@@ -1239,7 +1239,7 @@ Contar anualmente con un Programa Operativo Anual (POA) para garantizar el cumpl
 Contar bianualmente con la evaluación de la operación de la RBCM, basada en indicadores de desempeño y efectividad y en congruencia con lo establecido en los POA.
 
 ----
-Table31
+Table32
 *Las actividades se presentan en letra cursiva
 
 
@@ -1271,7 +1271,7 @@ Participar activamente en los diferentes comités y consejos municipales y estat
 En el mediano plazo, contar con acuerdos o esquemas de colaboración formal con los sectores involucrados en el aprovechamiento sustentable y conservación del ANP y su zona de influencia.
 
 ----
-Table32
+Table33
 *Las actividades se presentan en letra cursiva
 
 
@@ -1297,7 +1297,7 @@ Participar y apoyar al menos un proyecto internacional al año, dando el seguimi
 Contar en el mediano plazo, con un catálogo de instituciones, universidades o gobiernos internacionales que cuenten con programas de apoyo y colaboración en materia de conservación de especies, ecosistemas, recursos naturales y los servicios ambientales que prestan.
 
 ----
-Table33
+Table34
 *Las actividades se presentan en letra cursiva
 
 
@@ -1320,7 +1320,7 @@ Contar a corto plazo, con la identificación de las necesidades mínimas de infr
 Gestionar anualmente un proyecto que permita fortalecer e incrementar la infraestructura básica para la operación de la RBCM.
 
 ----
-Table34
+Table35
 *Las actividades se presentan en letra cursiva
 
 
@@ -1342,7 +1342,7 @@ Contar en el corto plazo, con una cartera de posibles fuentes de financiamiento.
 Contar en el mediano plazo, con un instrumento de gestión financiera para el fortalecimiento de las acciones que se realizan en la Reserva de la Biosfera.
 
 ----
-Table35
+Table36
 *Las actividades se presentan en letra cursiva
 
 
@@ -1363,7 +1363,7 @@ Contar con al menos una capacitación anual por parte del personal del ANP que f
 Realizar al menos una reunión al año con el equipo de trabajo para coordinar las actividades y detectar necesidades y áreas de oportunidad.
 
 ----
-Table36
+Table37
 *Las actividades se presentan en letra cursiva
 
 
@@ -1376,7 +1376,7 @@ Zonas Núcleo
 El Decreto por el que se declara área natural protegida, con el carácter de Reserva de la Biosfera Caribe Mexicano, establece en el Artículo Primero que “El área natural protegida presenta seis zonas núcleo con una superficie total de 1, 932,648-48-79.18 hectáreas, mientras que la zona de amortiguamiento queda comprendida por 3, 821,406-87-52.42 hectáreas”.
 
 ----
-Table37
+Table38
 ----
 
 Criterios de Subzonificación
@@ -1467,7 +1467,7 @@ En cuanto a la vegetación presente en esta subzona se encuentran pastos marinos
 Por último es importante recalcar la importancia de este ecosistema desde el punto de vista pesquero, ya que es un área donde especies comerciales pasan su etapa juvenil y pre adulta, migrando posteriormente hacia alta mar, donde se reproducen, por lo que las lagunas costeras adquieren gran importancia socioeconómica por ser un “semillero” o eslabón indispensable para el ciclo de vida de ciertas especies.
 
 ----
-Table38
+Table39
 ----
 
 ----
@@ -1487,7 +1487,7 @@ La vegetación acuática está dominada por pastos marinos (Thalassia testudinum
 La vegetación circundante de la laguna no presenta cambios significativos en su cobertura, y se caracteriza por presentar las 4 especies de manglar. En este sentido Chacmochuch es considerado por CONABIO como sitio de manglar con relevancia biológica y con necesidades de rehabilitación ecológica. Es zona migratoria de reproducción, anidación, crecimiento y refugio de aves, crustáceos y peces, además de servir de amortiguamiento contra huracanes (Vázquez-Lule, A. D. y J. R. Díaz-gallegos 2009).
 
 ----
-Table39
+Table40
 ----
 
 ----
@@ -1511,7 +1511,7 @@ En la fauna béntica se encuentran algunos bioindicadores como: Eunícidos (Palo
 El sistema arrecifal ofrece un lugar de refugio y reproducción para una gran cantidad de especies de peces marinos de gran interés comercial, como es el caso de los pargos (Lutjanus analis, L. griseus, L. synagris y L. apodus), las mojarras (Gerres cinereus), abadejos (Mycteroperca bonaci) y chac chic (Haemulon sciurus), entre otros. Las tortugas marinas presentes son caguama (Caretta caretta, EN Ap I de CITES) y blanca (Chelonia mydas, EN Ap I de CITES) mismas que se encuentran en categoría de peligro de extinción.
 
 ----
-Table40
+Table41
 ----
 
 ----
@@ -1569,7 +1569,7 @@ Por lo anterior, el sitio es identificado como uno de los 26 sitios prioritarios
 Dadas sus características, en esta subzona no existen actividades productivas, ya que la actividad pesquera no es de profundidad y se lleva a cabo en la subzona de aprovechamiento sustentable de los recursos naturales que colinda en su porción superior (de los 100 metros de profundidad a la superficie).
 
 ----
-Table41
+Table42
 ----
 
 ----
@@ -1595,7 +1595,7 @@ Por otro lado, esta subzona funcionará como corredor biológico, conectando la 
 Referente a la tenencia de la tierra, casi la totalidad de la superficie de esta subzona corresponde al Ejido de Isla Mujeres No obstante lo anterior, está libre de usos y aprovechamientos, y no presenta núcleos poblacionales en su interior. Asimismo, de acuerdo al Programa de Ordenamiento Ecológico Territorial Local del Municipio de Isla Mujeres, aproximadamente el 90% de la superficie de esta subzona es considerada en la modalidad de política ambiental de Preservación.
 
 ----
-Table42
+Table43
 ----
 
 ----
@@ -1613,7 +1613,7 @@ Dado que es un polígono profundo, en esta subzona no existen actividades produc
 Incorporar sustento técnico con el sector académico.
 
 ----
-Table43
+Table44
 ----
 
 ----
@@ -1635,7 +1635,7 @@ Es muy posible que también existan endemismos de especies marinas, como es el c
 En la actualidad se realiza turismo a baja escala para buceo y recorridos de observación de flora y fauna.
 
 ----
-Table44
+Table45
 ----
 
 ----
@@ -1657,7 +1657,7 @@ En esta subzona se desarrollan actividades recreativas de contemplación de la n
 De igual forma y desde 1973, Xcacel es un espacio donde la gente de la comunidad quintanarroense lleva a cabo recreación familiar y programas de educación ambiental sobre la importancia y conservación de las selvas, las playas, arrecifes, cenotes y sobre todo de las tortugas marinas, así como visita de grupos de escuelas y turistas para la observación del proceso de anidación de las mismas. Alrededor de 15,000 turistas, estudiantes y voluntarios la visitan cada temporada (validar información).
 
 ----
-Table45
+Table46
 ----
 
 ----
@@ -1675,7 +1675,7 @@ La parte central y norte de esta subzona es altamente usada por cuatro especies 
 Incorporar sustento técnico del sector académico.
 
 ----
-Table46
+Table47
 ----
 
 ----
@@ -1697,7 +1697,7 @@ De conformidad con González-Salas et al. (2003a, 2003b y 2003c), los arrecifes 
 Las agregaciones reproductivas de peces representan un proceso ecológico vulnerable, ocurren en el mismo sitio cada año y diferentes especies pueden usar la misma área. En algunas especies los individuos viajan largas distancias para reproducirse en grandes grupos incluyendo especies de importancia comercial como el mero (Serranidae) y el pargo (Lujtanidae). Su preservación es importante, ya que sus poblaciones han disminuido poniendo en riesgo el stock pesquero y los beneficios ecológicos y económicos que proveen. 
 
 información sobre usos
-Table47
+Table48
 ----
 
 ----
@@ -1751,7 +1751,7 @@ Asimismo, dentro de esta subzona se localiza la principal área de pesca de cama
 De acuerdo al Plan de manejo pesquero mencionado, “el fondo marino es de tipo arenoso con grandes macizos de origen coralino, lo que limita a las embarcaciones a operar en zonas llamadas localmente como “blanquizales”, libres de roca y coral”. Además, “se estima que F. brasiliensis puede distribuirse también en fondos coralinos, con lo cual una fracción de la población queda fuera de la influencia de las artes de pesca (Soto-Aguirre, 1992)”. Por lo anterior, es importante respetar las características del fondo marino para el desarrollo de las pesquerías.
 
 ----
-Table49
+Table50
 ----
 
 ----
@@ -1775,7 +1775,7 @@ La presencia de pastos marinos, plantas vasculares, angiospermas monocotiledóne
 En esta subzona existen actividades de pesca comercial por parte de pescadores cooperativados, así como turismo de bajo impacto, además de verse rodeada por el área costera conocida como Isla Blanca, en donde se percibe un incremento de actividades antropogénicas.
 
 ----
-Table50
+Table51
 ----
 
 ----
@@ -1795,7 +1795,7 @@ Dado que es una ruta de navegación importante para las embarcaciones turística
 Obtener información biológica con el sector académico
 
 ----
-Table51
+Table52
 ----
 
 ----
@@ -1815,7 +1815,7 @@ Esta especie es una de las pocas especies de tiburón que puede tolerar largos p
 Debido a la presencia de esta agregación, algunos prestadores de servicios turísticos realizan recorridos de avistamiento submarino de esta y otras especies, la cual requiere ser regulada por la autoridad competente a fin de que se realice sin impacto a dicha especie.
 
 ----
-Table52
+Table53
 ----
 
 ----
@@ -1839,7 +1839,7 @@ Esta subzona contiene las caletas conocidas como Yalkú y Yaku, pequeñas bahía
 La especie con mayor dominancia es Porites astreoides, seguido por Agaricia agaricites y Orbicella faveolata. En cuanto al porcentaje de colonias vivas, las especies con mayor dominancia son Porites astreoides (35%) y Siderastrea siderea (22%). Entre las especies con menor porcentaje de colonias vivas figuran Acropora cervicornis (4%), Millepora complanata (6%) y Diploria strigosa (5%). Sin embargo, también destaca la presencia de otras especies de coral como cuerno de alce (Acropora palmata), cuerno de ciervo (Acropora cervicornis), corales blandos o abanicos de mar (Plexaura homomalla y Plexaura dichotoma).
 
 ----
-Table53
+Table54
 ----
 
 ----
@@ -1863,7 +1863,7 @@ Debido a la riqueza biológica antes descrita, la bahía de Akumal constituye un
 Lo anterior hace necesario regular la intensidad de uso, a través de un manejo de los visitantes, tanto en el número de turistas que entran al agua, como en la frecuencia; en este sentido, las diversas actividades recreativas y de turismo que se realizan dentro de un ecosistema como el del área de refugio “Bahía de Akumal” deben ser llevadas a cabo de manera sustentable y ordenada, respetando los sitios designados para tal efecto. 
 
 ----
-Table54
+Table55
 ----
 
 ----
@@ -1891,7 +1891,7 @@ Esta subzona presenta especies de siete géneros de corales pétreos siendo Orbi
 La porción marina de estos polígonos presenta diversidad de actividades turístico recreativas y tráfico marítimo turístico y pesquero.
 
 ----
-Table55
+Table56
 ----
 
 ----
@@ -1915,7 +1915,7 @@ La batimetría revela profundidades promedio entre 100 y 500 metros, identificá
 La función principal de esta subzona es la de permitir la conectividad entre los diversos ecosistemas. En ella se presentan actividades principalmente de navegación de embarcaciones de alto calado y pesca comercial. 
 
 ----
-Table56
+Table57
 ----
 
 ----
@@ -1929,7 +1929,7 @@ Subzona de Uso Público Playa del Carmen y Tulum-Sian Ka’an
 Abarca una superficie total de 2,118.85 hectáreas, conformada por dos polígonos marinos: el primero, Playa del Carmen, con una superficie de 1,027.36 hectáreas, de aproximadamente 600 metros de ancho y 15 kilómetros de largo, ubicado frente al centro de población de Playa del Carmen, y el segundo, Tulum-Sian Ka’an con 1,091.49 hectáreas, de aproximadamente 2 km de ancho, ubicado a la altura del límite sur del Parque Nacional Tulum hasta la colindancia con las Reservas de la Biosfera Sian Ka’an y Arrecifes de Sian Ka’an.
 
 ----
-Table57
+Table58
 ----
 
 ----
@@ -1949,7 +1949,7 @@ Abarca una superficie de 1,637.80 hectáreas, conformada por dos polígonos en l
 En el primer polígono se localiza al noreste de Isla Mujeres con una superficie de 494.00 hectáreas en el que se encuentran los sitios denominados “Banco La Ollita” y “Banco Ollitas 2”, mientras que el segundo polígono se localiza al noroeste de la Isla de Cozumel, con una superficie de 1,143.80 hectáreas donde se encuentra el polígono denominado “Norte de Cozumel”, derivados de proyectos para la restauración y mantenimiento de playas en el Caribe Mexicano que han sido aprobados por la autoridad correspondiente en la materia.
 
 ----
-Table58
+Table59
 ----
 
 ----
@@ -2442,13 +2442,46 @@ Zúñiga I., (2014). Costa Oriental Maya: un acercamiento al comercio y navegaci
 10.1.1
 
 Anexo 1. Listado de fauna en la Reserva de la Biosfera Caribe Mexicano
-Table59
-----
-
-----
 Table60
 ----
 
 ----
 Table61
 ----
+
+----
+Table62
+----
+
+----
+Table63
+----
+
+----
+Table64
+----
+
+----
+Table65
+----
+
+----
+Table66
+----
+
+----
+Table67
+----
+
+----
+Table68
+----
+
+----
+Table69
+----
+
+----
+Table70
+----
+
