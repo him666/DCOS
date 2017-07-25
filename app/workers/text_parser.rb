@@ -40,7 +40,6 @@ class TextParser
 
   def subsection_adder(section, subsections)
     subsections.each do |subsection|
-      puts subsection
       sc = section.subsections.new
       sc.name = subsection
       sc.order = subsection.match(/(\d{1,}.\d{1,}.([a-z]|\d{1,}))/)
@@ -62,8 +61,6 @@ class TextParser
 
       strings.each do |st|
         strings2 = st.split(/\n/)
-
-        pp strings2
         sections = []
         subsections = []
         strings2.each do |st2|
@@ -84,35 +81,53 @@ class TextParser
 
   end
 
-  def image(index, doc)
-
+  def image(subsection,paragraph)
+    strings = paragraph.split(/\n/)
+    ct = subsection.content.new
+    ct.title = strings[0]
+    ct.code = strings[1]
+    ct.extra = strings[2]
+    ct.unique_id = SecureRandom.uuid
+    ct.oftype = 'image'
+    ct.save
   end
 
-  def paragraph(subsection, paragraphs)
-    paragraphs.each do |p|
-      ct = subsection.content.new
-      ct.unique_id = SecureRandom.uuid
-      ct.code  = p
-    end
+  def paragraph(subsection, paragraph)
+    ct = subsection.content.new
+    ct.unique_id = SecureRandom.uuid
+    ct.code = paragraph
+    ct.oftype = 'text'
+    ct.save
   end
 
   def table(index, doc)
     doc.tables[index]
   end
 
+  def paragraph_parser
+    file = File.open('./app/workers/paragraphs.txt', 'rb')
+    content = file.read.force_encoding('utf-8')
+    paragraphs = content.split(/\n{3}/)
+    paragraphs.each do |ph|
+      puts ph[0..5]
+    end
+  end
+
   def run
-    docu = doc_adder(Organization.first, 'Borrador')
-    file_parser(docu)
+    docu = Document.first
+    #file_parser(docu)
+    paragraph_parser
     doc = Docx::Document.open('./app/workers/pmcm.docx')
     puts doc.tables.count
+
     puts ENV['SENDMAIL_USER']
 
 # puts doc.tables[1].methods
-# doc.tables[1].rows.each do |row| # Row-based iteration
-#   row.cells.each do |cell|
-#     # puts cell.text
-#   end
-# end
+ doc.tables[59].rows.each do |row| # Row-based iteration
+   row.cells.each do |cell|
+      puts cell.text
+   end
+ end
   end
 end
 t = TextParser.new
