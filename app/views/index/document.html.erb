@@ -10,30 +10,48 @@
         <div class="form-group">
           <%= select(@params, :chapter_id, @doc.chapters.collect { |p| [p.name, p.id] }, {include_blank: false, class: ''}) %>
 
-          <%= submit_tag('Capítulo', :class => ' btn-info btn-xs') %>
+          <%= submit_tag('Cargar Secciones', :class => ' btn-info btn-xs') %>
         </div>
     <% end %>
     <%= form_tag(index_document_path, method: :post) do %>
         <div class="form-group">
           <%= select(@params, :section_id, @sections.collect { |p| [p.name, p.id] }, {include_blank: false, class: ''}) %>
 
-          <%= submit_tag('Sección', :class => ' btn-info btn-xs') %>
+          <%= submit_tag('Cargar Subsecciones', :class => ' btn-info btn-xs') %>
         </div>
     <% end %>
     <%= form_tag(index_document_path, method: :post) do %>
         <div class="form-group">
           <%= select(@params, :subsection_id, @subsections.collect { |p| [p.name, p.id] }, {include_blank: false, class: ''}) %>
 
-          <%= submit_tag('Subsección', :class => ' btn-info btn-xs') %>
+          <%= submit_tag('Cargar Parrafos', :class => ' btn-info btn-xs') %>
         </div>
     <% end %>
-    <% @contents.each do |ct| %>
-    <%= "<p>#{ct.code}</p>".html_safe if ct.oftype == 'text' %>
+    <% unless params[:subsection_id].nil? %>
+        <% @contents.each do |ct| %>
+            <div class='container'>
+              <p class='text-justify rounded'>
+                <% if ct.oftype != 'table' %>
+                    <%= "#{ct.code}".html_safe if ct.oftype == 'text' %>
+                    <%= image_tag(ct.code, alt: ct.extra, data: {title: ct.title}) if ct.oftype == 'image' %>
+                    <br>
+                    <%= link_to image_tag('writec2.png', :class => 'img_icon'), "http://www.mysite.com/" %>
+                    <%= link_to image_tag('seec1.png', :class => 'img_icon'), "http://www.mysite.com/" %>
+                    </p>
+                <% else %>
 
-    <%= image_tag(ct.code,alt: ct.extra ,data: { title: ct.title }) if ct.oftype == 'image'%>
-    <%= "#{ct.code}".html_safe if ct.oftype == 'table' %>
-        <br>
+                    <%= "#{ct.code.gsub('<table>',"<table class = 'resp3-table'>")}".html_safe if ct.oftype == 'table' %>
+
+                    <tr>
+                      <td><%= link_to image_tag('writec2.png', :class => 'img_icon'), "http://www.mysite.com/" %>
+
+                      <%= link_to image_tag('seec1.png', :class => 'img_icon'), "http://www.mysite.com/" %></tr>
+                    </td>
+
+                <% end %>
+                </div>
+            <br>
+        <% end %>
     <% end %>
   </div>
-
 </div>
