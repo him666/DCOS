@@ -147,5 +147,5 @@ class TextParser
   end
 end
 
-t = TextParser.new
-t.run
+#t = TextParser.new
+#t.run

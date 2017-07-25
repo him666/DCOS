@@ -1,0 +1,35 @@
+<div align="justify">
+
+
+  <div align="center">
+
+    <div align="left"><%= link_to('Regresar', index_home_path) %></div>
+    <p>Nombre del Documento <%= @doc.name %></p>
+
+    <%= form_tag(index_document_path, method: :post) do %>
+        <div class="form-group">
+          <%= select(@params, :chapter_id, @doc.chapters.collect { |p| [p.name, p.id] }, {include_blank: false, class: ''}) %>
+
+          <%= submit_tag('Capítulo', :class => ' btn-info btn-xs') %>
+        </div>
+    <% end %>
+    <%= form_tag(index_document_path, method: :post) do %>
+        <div class="form-group">
+          <%= select(@params, :section_id, @sections.collect { |p| [p.name, p.id] }, {include_blank: false, class: ''}) %>
+
+          <%= submit_tag('Sección', :class => ' btn-info btn-xs') %>
+        </div>
+    <% end %>
+    <%= form_tag(index_document_path, method: :post) do %>
+        <div class="form-group">
+          <%= select(@params, :subsection_id, @subsections.collect { |p| [p.name, p.id] }, {include_blank: false, class: ''}) %>
+
+          <%= submit_tag('Subsección', :class => ' btn-info btn-xs') %>
+        </div>
+    <% end %>
+    <% @contents.each do |ct| %>
+    <%= "<p>#{ct.code}</p>".html_safe if ct.oftype == 'text' %>
+    <% end %>
+  </div>
+
+</div>

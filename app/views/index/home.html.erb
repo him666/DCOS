@@ -1,28 +1,36 @@
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p><br/>
 <div align="right">
-<% if current_user.privileges.first.level == 'root' %>
-    <%= link_to('administrar cuentas',index_admin_path)  %>
-<% end %> <br/>
 
-<%= link_to('Cerrar sesión', destroy_user_session_path, :method => :delete) %>
-<br>
+
+  <% if current_user.privileges.first.level == 'root' %>
+      <%= link_to('Administrar Cuentas', index_admin_path) %>
+      <br/>
+      <%= link_to('Reportes y analíticas', index_data_path) %>
+  <% end %>
+  <br/>
+  <%= link_to('Documento', index_document_path) %>
+  <br/>
+
+  <%= link_to('Cerrar sesión', destroy_user_session_path, :method => :delete) %>
+  <br>
 </div>
 <div align="center">
-<%= image_tag('image1.png')%><br/>
-<p>
-  PROGRAMA DE MANEJO
-<br>
+  <%= image_tag('image1.png') %>
+  <br/>
+  <p>
+    PROGRAMA DE MANEJO
+    <br>
 
-  RESERVA DE LA BIOSFERA
-  <br>
-  CARIBE MEXICANO
+    RESERVA DE LA BIOSFERA
+    <br>
+    CARIBE MEXICANO
 
-<br>
-  BORRADOR
+    <br>
+    BORRADOR
 
-<br>
+    <br>
 
-  MAYO, 2017
-</p>
+    MAYO, 2017
+  </p>
 </div>

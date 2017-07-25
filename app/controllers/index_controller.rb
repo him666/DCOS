@@ -1,5 +1,19 @@
 class IndexController < ApplicationController
   before_action :authenticate_user!
+  def document
+
+  @doc = Document.first
+
+  @sections = Chapter.first.sections
+  @sections = Chapter.find(params[:chapter_id]).sections unless params[:chapter_id].nil?
+
+
+  @subsections = Section.first.subsections
+  @subsections = Section.find(params[:section_id]).subsections unless params[:section_id].nil?
+
+  @contents = Subsection.first.contents
+  @contents = Subsection.find(params[:subsection_id]).contents unless params[:subsection_id].nil?
+  end
 
   def home
     privilege_granter(current_user)
@@ -35,6 +49,10 @@ class IndexController < ApplicationController
      p.name = name
      p.level = privilege
      p.save
+  end
+
+  def document_params
+    params.require(@params).permit(:chapter_id, :section_id, :subsection_id)
   end
 
   def has_privilege(current_user)
