@@ -6,11 +6,9 @@ class TextParser
   end
 
   def doc_adder(org, name)
-    doc = Document.new
+    doc = org.documents.new
     doc.name = name
-    org.documents << doc
     doc.save
-    puts doc
     doc
   end
 
@@ -70,42 +68,38 @@ class TextParser
         end
         section_adder(ch, sections, subsections)
       end
-      # pp chapter[0]
-      # pp sections
-      # pp subsections
-
 
       index = index + 1
-      puts '------------------------'
+
     end
 
   end
 
   def image(subsection, paragraph)
     strings = paragraph.split(/\n/)
-    ct = subsection.content.new
+    ct = subsection.contents.new
     ct.title = strings[0] unless strings[0] == '----'
     ct.code = strings[1].downcase + '.jpeg'
     ct.extra = strings[2] unless strings[2] == '----'
     ct.unique_id = SecureRandom.uuid
     ct.oftype = 'image'
     puts ct.code
-    #ct.save
+    ct.save
   end
 
   def paragraph(subsection, paragraph)
-    ct = subsection.content.new
+    ct = subsection.contents.new
     ct.unique_id = SecureRandom.uuid
     ct.code = paragraph
     ct.oftype = 'text'
-    puts paragraph
-    #ct.save
+    puts ct
+    ct.save
   end
 
   def table(subsection, paragraph, doc)
     ct = subsection.contents.new
     phrases = paragraph.split(/\n/)
-    index = phrases[1].gsub('Table').to_i
+    index = phrases[1].gsub('Table','').to_i
     title = phrases[0] unless phrases[0] == '----'
     extra = phrases[2] unless phrases[0] == '----'
     table = doc.tables[index]
@@ -124,7 +118,7 @@ class TextParser
     ct.code = code
     ct.extra = extra
     ct.unique_id = SecureRandom.uuid
-    #ct.save
+    ct.save
   end
 
   def paragraph_parser(doc)
@@ -134,25 +128,22 @@ class TextParser
     paragraphs.each do |ph|
 
       contents = ph.split(/\n{2}/)
-
       subsection = Subsection.where(order: contents.first).first
-
-      contents[1..-1].each do |ct|
-        table(subsection, ct, doc) if ct.include?('Table')
-        image(subsection, ct) if ct.include?('Image')
-        paragraph(subsection, ct)
-      end
+      puts subsection
+       contents[1..-1].each do |ct|
+         table(subsection, ct, doc) if ct.include?('Table')
+         image(subsection, ct) if ct.include?('Image')
+         paragraph(subsection, ct) unless (ct.include?('Table') || ct.include?('Image'))
+       end
     end
   end
 
   def run
-    docu = Document.first
-    #file_parser(docu)
+    org_adder('CONANP')
+    docu = doc_adder(Organization.first,'BORRADOR')
+    file_parser(docu)
     doc = Docx::Document.open('./app/workers/pmcm.docx')
     paragraph_parser(doc)
-    #puts doc.tables.count
-    #puts ENV['SENDMAIL_USER']
-    # puts doc.tables[1].methods
   end
 end
 
