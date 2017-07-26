@@ -9,5 +9,7 @@ Rails.application.routes.draw do
   post 'index/document'
   get 'index/data'
   resources :interactions
+  post 'interactions/new'
+
 end
 
