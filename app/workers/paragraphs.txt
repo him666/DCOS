@@ -603,6 +603,7 @@ El manejo de los recursos naturales en la Reserva de la Biosfera Caribe Mexicano
 Table10
 ----
 
+
 6.1.1
 
 SUBPROGRAMAS DE CONSERVACIÓN
@@ -651,6 +652,7 @@ Obtener indicadores del grado de cumplimiento de las medidas de regulación apli
 ----
 Table11
 ----
+
 
 6.1.2
 
@@ -758,7 +760,6 @@ Table15
 6.2.1
 
 SUBPROGRAMA DE MANEJO
-
 La protección de espacios naturales tiene, entre otras finalidades, crear los mecanismos de manejo de los recursos orientados hacia la sustentabilidad, promoviendo la planeación de las actividades productivas de acuerdo a las características particulares de cada ecosistema y garantizando la permanencia del patrimonio natural. 
 
 Una de las estrategias de manejo del ANP, será establecer mecanismos de control que establezcan las formas de dar acceso a los aprovechamientos de los recursos, sean estos extractivos o no extractivos; así como de reglas y medidas que disminuyan la afectación de los recursos y, por ende, del bienestar de los usuarios. 
@@ -795,6 +796,7 @@ Impulsar la aplicación de tecnologías sustentables en las actividades producti
 ----
 Table16
 *Las actividades se presentan en letra cursiva.
+
 
 6.2.2
 
@@ -1158,7 +1160,6 @@ Table29
 6.5.3
 
 Componente de capacitación para el desarrollo sostenible
-
 Si se quiere lograr un cambio en los esquemas de aprovechamiento sostenible de los recursos naturales del ANP deben generarse (basados en el conocimiento científico) las capacidades (actitudes y aptitudes) en los diferentes usuarios de los recursos naturales, por lo que de manera permanente es importante mantener procesos de capacitación en las diversas materias que atañen a la conservación del área. 
 
 Específicamente en la Reserva de la Biosfera del Caribe Mexicano se requiere enfocar dicha capacitación a los prestadores de servicios turísticos y pescadores que realizan sus actividades productivas dentro de la Reserva, así como entre ejidatarios y demás usuarios del ANP,  con el fin de fomentar las buenas prácticas, el cumplimiento de la normatividad, aplicación de nuevas tecnologías y metodologías, fortalecimiento comunitario y organizacional, que permitan realizar sus actividades de manera sustentable. 

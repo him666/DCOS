@@ -33,7 +33,7 @@ $breakpoint-alpha: 480px;
 
 
 .btn2 {
-  background: #757575;
+  background: #ffffff;
   background-image: -webkit-linear-gradient(top, #34495E, #34495E);
   background-image: -moz-linear-gradient(top, #34495E, #34495E);
   background-image: -ms-linear-gradient(top, #34495E, #34495E);
@@ -166,4 +166,43 @@ h1 {
   th, td:before {
     color: #ffffff;
   }
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+table{
+  overflow: hidden;
+  width: 100%;
+  border-collapse: collapse;
+
+}
+
+tr:nth-of-type(odd) {
+    background: #c4e3f3;
+  }
+  th {
+    background: #31708f;
+    color: white;
+    font-weight: bold;
+  }
+  td, th {
+    word-wrap: break-word;
+    padding: 6px;
+    border: 1px solid #3cb0fd;
+    text-align: left;
+  }
+select{
+
+  min-width: 450px;
+}
+p{
+  text-justify: auto;
+}
+
+.img_icon{
+  width: 64px;
+  height: auto;
+  background-color: transparent;
+  border: none;
 }
