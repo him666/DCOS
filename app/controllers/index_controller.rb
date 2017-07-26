@@ -1,18 +1,31 @@
 class IndexController < ApplicationController
   before_action :authenticate_user!
+
   def document
 
-  @doc = Document.first
+    @doc = Document.first
+    @h_params = [] if @h_params.nil?
+    @sections = Chapter.first.sections
 
-  @sections = Chapter.first.sections
-  @sections = Chapter.find(params[:chapter_id]).sections unless params[:chapter_id].nil?
+    unless params[:chapter_id].nil?
+      @sections = Chapter.find(params[:chapter_id]).sections
+      @h_params[0]=params[:chapter_id]
+    end
 
+    @subsections = Section.first.subsections
 
-  @subsections = Section.first.subsections
-  @subsections = Section.find(params[:section_id]).subsections unless params[:section_id].nil?
+    unless params[:section_id].nil?
+      @subsections = Section.find(params[:section_id]).subsections
+      @h_params[1]=params[:section_id]
+    end
 
-  @contents = Subsection.first.contents
-  @contents = Subsection.find(params[:subsection_id]).contents unless params[:subsection_id].nil?
+    @contents = Subsection.first.contents
+
+    unless params[:subsection_id].nil?
+    @contents = Subsection.find(params[:subsection_id]).contents
+    @h_params[2]=params[:subsection_id]
+    end
+    pp @h_params
   end
 
   def home
@@ -21,7 +34,7 @@ class IndexController < ApplicationController
 
   def admin
     redirect_to index_home_path unless has_privilege(current_user)
-    @users = User.all.sort_by {|user| user.email}
+    @users = User.all.sort_by { |user| user.email }
   end
 
   def permission
@@ -43,12 +56,12 @@ class IndexController < ApplicationController
   end
 
   def promotion(user, privilege = 'root', name = 'admin')
-     p = Privilege.new
-     p = user.privileges.first unless user.privileges.first.nil?
-     p.user_id = user.id
-     p.name = name
-     p.level = privilege
-     p.save
+    p = Privilege.new
+    p = user.privileges.first unless user.privileges.first.nil?
+    p.user_id = user.id
+    p.name = name
+    p.level = privilege
+    p.save
   end
 
   def document_params
