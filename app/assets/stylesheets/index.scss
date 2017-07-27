@@ -5,6 +5,7 @@
 @import "bootstrap";
 $breakpoint-alpha: 480px;
 .btn {
+  display: inline-block;
   background: #3498db;
   background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
   background-image: -moz-linear-gradient(top, #3498db, #2980b9);
@@ -23,6 +24,7 @@ $breakpoint-alpha: 480px;
 
 .btn:hover {
   background: #3cb0fd;
+  display: inline-block;
   background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
   background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
   background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
@@ -33,6 +35,7 @@ $breakpoint-alpha: 480px;
 
 
 .btn2 {
+  display: inline-block;
   background: #ffffff;
   background-image: -webkit-linear-gradient(top, #34495E, #34495E);
   background-image: -moz-linear-gradient(top, #34495E, #34495E);
@@ -50,6 +53,7 @@ $breakpoint-alpha: 480px;
 }
 
 .btn2:hover {
+  display: inline-block;
   background: #3cb0fd;
   background-image: -webkit-linear-gradient(top, #4F6D7A, #4F6D7A);
   background-image: -moz-linear-gradient(top, #4F6D7A, #4F6D7A);
@@ -144,6 +148,7 @@ body {
 }
 
 h1 {
+  text-align: center;
   font-weight: normal;
   letter-spacing: -1px;
   color: #34495E;
@@ -194,10 +199,11 @@ tr:nth-of-type(odd) {
   }
 select{
 
-  min-width: 450px;
+  min-width: 400px;
 }
 p{
-  text-justify: auto;
+  text-justify-trim: auto;
+
 }
 
 .img_icon{
@@ -206,3 +212,4 @@ p{
   background-color: transparent;
   border: none;
 }
+

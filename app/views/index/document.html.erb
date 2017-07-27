@@ -1,35 +1,40 @@
-<div align="center">
-  <div align="left"><%= link_to('Regresar', index_home_path) %></div>
-  <p>Nombre del Documento <%= @doc.name %></p>
+<div align="left"><%= link_to('Regresar', index_home_path) %></div>
+<div class="container-fluid">
+<h1>Nombre del Documento: <%= @doc.name %></h1>
+  <%= form_tag(index_document_path, method: :post, :name => 'chapter') do %>
+      <div class="form-inline">
 
-  <%= form_tag(index_document_path, method: :post) do %>
-      <div class="d-flex flex-row justify-content-center">
-        <div class="p-1"><%= select(@params, :chapter_id, @doc.chapters.collect { |p| [p.name, p.id] }, :selected => @h_params.first) %></div>
-        <div class="p-1"> <%= submit_tag('Cargar Secciones', :class => ' btn-info btn-xs') %></div>
+        <div class="col-sm-8 p-1"><%= select(@params, :chapter_id, @doc.chapters.collect { |p| [p.name, p.id] }, :selected => @h_params.first, :onchange => ('javascript: document.chapters.submit();')) %></div>
+        <div class="col-sm p-1" align="left"> <%= submit_tag('Cargar Secciones', :class => ' btn-info btn-xs') %></div>
       </div>
   <% end %>
-  <%= form_tag(index_document_path, method: :post) do %>
-      <div class="d-flex flex-row justify-content-center ">
-        <div class="p-1"> <%= select(@params, :section_id, @sections.collect { |p| [p.name, p.id] }, :selected => @h_params.second) %></div>
+  <%= form_tag(index_document_path, method: :post, :name => 'section') do %>
+      <div class="form-inline">
+
+        <div class="col-sm-8 p-1"> <%= select(@params, :section_id, @sections.collect { |p| [p.name, p.id] }, :selected => @h_params.second, :onchange => ('javascript: document.sections.submit();')) %></div>
         <%= hidden_field_tag('hidden', @h_params) %>
-        <div class="p-1"> <%= submit_tag('Cargar Subsecciones', :class => ' btn-info btn-xs') %></div>
+        <div class="col-sm p-1" align="left"> <%= submit_tag('Cargar Subsecciones', :class => ' btn-info btn-xs') %></div>
       </div>
   <% end %>
-  <%= form_tag(index_document_path, method: :post) do %>
-      <div class="d-flex flex-row justify-content-center">
-        <div class="p-1">  <%= select(@params, :subsection_id, @subsections.collect { |p| [p.name, p.id] }, :selected => @h_params[2]) %></div>
+  <%= form_tag(index_document_path, method: :post, :name => 'subsection') do %>
+      <div class="form-inline">
+
+        <div class="col-sm-8 p-1">  <%= select(@params, :subsection_id, @subsections.collect { |p| [p.name, p.id] }, :selected => @h_params[2], :onchange => ('javascript: document.subsections.submit();')) %></div>
         <%= hidden_field_tag('hidden', @h_params) %>
-        <div class="p-1">  <%= submit_tag('Cargar Parrafos', :class => ' btn-info btn-xs') %></div>
+        <div class="col-sm p-1" align="left">  <%= submit_tag('Cargar Parrafos', :class => ' btn-info btn-xs') %></div>
       </div>
   <% end %>
+</div>
+<div class="container-fluid">
+<% unless params[:subsection_id].nil? %>
 
-  <% unless params[:subsection_id].nil? %>
-      <% @contents.each do |ct| %>
-          <% if ct.oftype != 'table' %>
-              <%= "#{ct.code.gsub('\n', '<br>')}".html_safe if ct.oftype == 'text' %>
-              <%= image_tag(ct.code, alt: ct.extra, data: {title: ct.title}) if ct.oftype == 'image' %>
-              <br>
-
+    <% @contents.each do |ct| %>
+        <p align="justify">
+        <% if ct.oftype != 'table' %>
+            <%= "#{ct.code.gsub('\n', '<br>')}".html_safe if ct.oftype == 'text' %>
+            <%= image_tag(ct.code, alt: ct.extra, data: {title: ct.title}) if ct.oftype == 'image' %>
+            <br>
+            <div class="form-inline">
               <%= button_to new_interaction_path(ct: ct.id, bw: current_user.id), {class: 'btn btn-default btn-lg'} do %>
                   <span class="glyphicon glyphicon-pencil"></span>
               <% end %>
@@ -37,24 +42,29 @@
               <%= button_to interactions_path(ct: ct.id, bw: current_user.id), {class: 'btn btn-default btn-lg', method: :get} do %>
                   <span class="glyphicon glyphicon-list"></span>
               <% end %>
+            </div>
+            <br>
+              </p>
+        <% else %>
 
+            <%= "#{ct.code.gsub('<table>', "<table class = 'resp3-table'>")}".html_safe if ct.oftype == 'table' %>
 
-          <% else %>
+            <tr>
+              <td>
+                <div class="form-inline">
+                  <%= button_to new_interaction_path(ct: ct.id, bw: current_user.id), {class: 'btn btn-default btn-lg'} do %>
+                      <span class="glyphicon glyphicon-pencil"></span>
+                  <% end %>
 
-              <%= "#{ct.code.gsub('<table>', "<table class = 'resp3-table'>")}".html_safe if ct.oftype == 'table' %>
+                  <%= button_to interactions_path(ct: ct.id, bw: current_user.id), {class: 'btn btn-default btn-lg', method: :get} do %>
+                      <span class="glyphicon glyphicon-list"></span>
+                  <% end %>
+                </div>
+              </td>
+            </tr>
+            <br>
+        <% end %>
 
-              <tr>
-                <td>
-                  <button type="submit" class="btn btn-default btn-lg">
-                    <span class="glyphicon glyphicon-pencil"></span>
-                  </button>
-                  <button type="button" class="btn btn-default btn-lg">
-                    <span class="glyphicon glyphicon-list"></span>
-                  </button>
-                </td>
-          <% end %>
-          </div>
-          <br>
-      <% end %>
-  <% end %>
-
+    <% end %>
+<% end %>
+</div>
