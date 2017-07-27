@@ -1,5 +1,23 @@
 <h1>Añadir Comentario</h1>
+<div class="container-fluid">
+    <% unless params[:ct].nil? %>
+       <h1><%= label_tag('Contenido') %></h1>
+      <p align="justify">
+        <% ct = Content.find(params[:ct]) %>
+        <% if ct.oftype != 'table' %>
+            <%= "#{ct.code.gsub('\n', '<br>')}".html_safe if ct.oftype == 'text' %>
+            <%= image_tag(ct.code, alt: ct.extra, data: {title: ct.title}) if ct.oftype == 'image' %>
+            <br>
+
+            </p>
+        <% else %>
+            <%= "#{ct.code.gsub('<table>', "<table class = 'resp3-table'>")}".html_safe if ct.oftype == 'table' %>
+
+            <br>
+        <% end %>
+    <% end %>
+    </div>
 
 <%= render 'form', interaction: @interaction %>
 
-<%= link_to 'Back', interactions_path %>
+<%= link_to 'Back', index_document_path %>

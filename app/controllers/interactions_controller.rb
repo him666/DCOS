@@ -5,7 +5,11 @@ class InteractionsController < ApplicationController
   # GET /interactions
   # GET /interactions.json
   def index
-    @interactions = Interaction.all
+    if params[:ct].nil?
+    @interactions = Interaction.where(by_who: current_user.id)
+    else
+      @interactions = Content.find(:ct).interactions
+    end
   end
 
   # GET /interactions/1
@@ -29,11 +33,12 @@ class InteractionsController < ApplicationController
   # POST /interactions
   # POST /interactions.json
   def create
-    @interaction = Interaction.new(interaction_params)
+    content = Content.find(interaction_params[:content_id])
+    @interaction =content.interactions.new(interaction_params)
 
     respond_to do |format|
       if @interaction.save
-        format.html { redirect_to @interaction, notice: 'Interaction was successfully created.' }
+        format.html { redirect_to @interaction, notice: 'Tu comentario ha sido añadido!' }
         format.json { render :show, status: :created, location: @interaction }
       else
         format.html { render :new }
@@ -47,7 +52,7 @@ class InteractionsController < ApplicationController
   def update
     respond_to do |format|
       if @interaction.update(interaction_params)
-        format.html { redirect_to @interaction, notice: 'Interaction was successfully updated.' }
+        format.html { redirect_to @interaction, notice: 'Tu comentario ha sido editado correctamente.' }
         format.json { render :show, status: :ok, location: @interaction }
       else
         format.html { render :edit }
@@ -74,6 +79,6 @@ class InteractionsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def interaction_params
-    params.fetch(:interaction, {})
+    params.require(:interaction).permit(:oftype,:msg,:by_who,:author, :content_id)
   end
 end

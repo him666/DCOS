@@ -4,32 +4,40 @@ class IndexController < ApplicationController
   def document
 
     @doc = Document.first
-    @h_params = [] if @h_params.nil?
-    @sections = Chapter.first.sections
 
-    unless params[:chapter_id].nil?
-      @sections = Chapter.find(params[:chapter_id]).sections
-      @h_params[0]=params[:chapter_id]
-    end
+    @chapters = Chapter.all
 
-    @subsections = Section.first.subsections
+    @sections = Section.all
 
-    unless params[:section_id].nil?
-      @subsections = Section.find(params[:section_id]).subsections
-      @h_params[1]=params[:section_id]
-    end
+    @subsections = @sections.first.subsections
 
-    @contents = Subsection.first.contents
-
-    unless params[:subsection_id].nil?
-    @contents = Subsection.find(params[:subsection_id]).contents
-    @h_params[2]=params[:subsection_id]
-    end
-    pp @h_params
   end
 
   def home
     privilege_granter(current_user)
+  end
+
+  def update_sections
+    @doc = Document.first
+    pp params
+    puts params[:chapter_id]
+    chapter = Chapter.find(params[:chapter_id])
+    @sections = chapter.sections.map{|a| [a.name, a.id]}.insert(0, 'Seleccionar sección')
+  end
+
+  def update_subsections
+    pp params
+    puts params[:section_id]
+    section = Section.find(params[:section_id])
+    @subsections= section.subsections.map{|a|[a.name,a.id]}.insert(0,'Seleccionar subsección')
+  end
+
+  def update_paragrahs
+    subsection = Subsection.find(params[:subsection_id])
+    @contents = subsection.contents
+    respond_to do |format|
+      format.js
+    end
   end
 
   def admin

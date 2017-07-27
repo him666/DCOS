@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get 'index/data'
   resources :interactions
   post 'interactions/new'
-
+  get 'index/update_sections', :as => 'update_sections'
+  get 'index/update_subsections', :as => 'update_subsections'
+  get 'index/update_paragraphs', :as => 'update_paragraphs'
 end
 

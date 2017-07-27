@@ -1,17 +1,36 @@
 <%= form_for(interaction) do |f| %>
-  <% if interaction.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(interaction.errors.count, "error") %> prohibited this interaction from being saved:</h2>
-
-      <ul>
-      <% interaction.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+    <% if interaction.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(interaction.errors.count, "error") %> prohibited this interaction from being saved:</h2>
+          <ul>
+            <% interaction.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+    <div class="container-fluid">
+      <div class="actions">
+        <div class="row">
+        <%= f.label :Tipo %>
+        </div>
+        <div class="row">
+        <%= f.select :oftype,['Comentario','Observacion'] %>
+        </div>
+        <div class="row">
+        <%= f.label :Mensaje %>
+        </div>
+        <div class="row">
+        <%= f.text_area :msg %>
+        </div>
+          <div class="row">
+        <%= f.hidden_field :by_who, value: current_user.id %>
+        <%= f.hidden_field :author, value: current_user.first_name %>
+         <%= f.hidden_field :content_id, value: params[:ct] %>
+          </div>
+          <div class="row">
+        <%= f.submit('Hacer comentario') %>
+          </div>
+      </div>
     </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
 <% end %>
