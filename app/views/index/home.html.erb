@@ -1,5 +1,7 @@
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p><br/>
+<div id="flash">
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+</div>
 <div class="container-fluid">
   <div class="row-fluid">
     <div class="span2">
@@ -13,7 +15,8 @@
 
         <%= link_to('Documento', index_document_path) %>
         <br>
-
+        <%= link_to('Comentarios Realizados',interactions_path) %>
+        <br>
         <%= link_to('Cerrar sesión', destroy_user_session_path, :method => :delete) %>
         <br>
       </div>

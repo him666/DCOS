@@ -1,59 +1,110 @@
-
-  <div align="center">
-    <div align="left"><%= link_to('Regresar', index_home_path) %></div>
-    <p>Nombre del Documento <%= @doc.name %></p>
-
-    <%= form_tag(index_document_path, method: :post) do %>
-        <div class="d-flex flex-row justify-content-center">
-          <div class="p-1"><%= select(@params, :chapter_id, @doc.chapters.collect { |p| [p.name, p.id] },:selected=>@h_params.first) %></div>
-          <div class="p-1"> <%= submit_tag('Cargar Secciones', :class => ' btn-info btn-xs') %></div>
-        </div>
-    <% end %>
-    <%= form_tag(index_document_path, method: :post) do %>
-        <div class="d-flex flex-row justify-content-center ">
-          <div class="p-1"> <%= select(@params, :section_id, @sections.collect { |p| [p.name, p.id] }, :selected=>@h_params.second) %></div>
-            <%= hidden_field_tag('hidden',@h_params) %>
-            <div class="p-1"> <%= submit_tag('Cargar Subsecciones', :class => ' btn-info btn-xs') %></div>
-        </div>
-    <% end %>
-    <%= form_tag(index_document_path, method: :post) do %>
-        <div class="d-flex flex-row justify-content-center">
-          <div class="p-1">  <%= select(@params, :subsection_id, @subsections.collect { |p| [p.name, p.id] },:selected=>@h_params[2]) %></div>
-          <%= hidden_field_tag('hidden',@h_params) %>
-          <div class="p-1">  <%= submit_tag('Cargar Parrafos', :class => ' btn-info btn-xs') %></div>
-        </div>
-    <% end %>
-
-    <% unless params[:subsection_id].nil? %>
-        <% @contents.each do |ct| %>
-            <div class='container'>
-              <p class='text-justify rounded'>
-                <% if ct.oftype != 'table' %>
-                    <%= "#{ct.code.gsub('\n','<br>')}".html_safe if ct.oftype == 'text' %>
-                    <%= image_tag(ct.code, alt: ct.extra, data: {title: ct.title}) if ct.oftype == 'image' %>
-                    <br>
-                    <button type="button" class="btn btn-default btn-lg">
-                      <span class="glyphicon glyphicon-pencil"></span>
-                    </button>
-                    <button type="button" class="btn btn-default btn-lg">
-                      <span class="glyphicon glyphicon-list"></span>
-                    </button>
-                    </p>
-                <% else %>
-
-                    <%= "#{ct.code.gsub('<table>',"<table class = 'resp3-table'>")}".html_safe if ct.oftype == 'table' %>
-
-                    <tr>
-                      <td><button type="button" class="btn btn-default btn-lg">
-                        <span class="glyphicon glyphicon-pencil"></span>
-                      </button>
-                        <button type="button" class="btn btn-default btn-lg">
-                          <span class="glyphicon glyphicon-list"></span>
-                        </button></td>
-
-                <% end %>
-                </div>
-            <br>
-        <% end %>
-    <% end %>
+<div align="left"><%= link_to('Regresar', index_home_path) %></div>
+<div class="container-fluid">
+  <h1>Nombre del Documento: <%= @doc.name %></h1>
+  <div class="row col-sm-12 p-1 ">
+    <div class=" col-sm-12 p-1">
+  <%= collection_select(:chapter_id, :chapter_id, @chapters, :id, :name, {:prompt => 'Seleccionar Cap.'}, {:id => 'chapters_select'}) %>
   </div>
+  </div>
+
+    <div class="row col-sm-12 p-1">
+      <div class=" col-sm-12 p-1">
+  <%= collection_select(:section_id, :section_id, @sections, :id, :name, {:prompt => 'Seleccionar Sección.'}, {:id => 'sections_select'}) %>
+    </div>
+    </div>
+  <%= form_tag(index_document_path, method: :post, :name => 'subsection') do %>
+
+        <div class="row col-sm-12 p-1">
+          <div class=" col-sm-12 p-1">
+          <%= collection_select(:subsection_id, :subsection_id, @subsections, :id, :name, {:prompt => 'Seleccionar Subsección.', data: {remote: true}}, {:id => 'subsections_select'}) %>
+          </div>
+          </div>
+        <% @h_params = [:chapter_id, :subsection_id] %>
+        <div class="col-sm-12 p-1">
+          <%= hidden_field_tag('hidden', @h_params) %>
+          <%= submit_tag('Cargar Parrafos', :class => ' btn-info btn-xs') %>
+        </div>
+      </div>
+  <% end %>
+</div>
+<div class="container-fluid">
+  <% unless params[:subsection_id].nil? %>
+      <% Subsection.find(params[:subsection_id][:subsection_id]).contents.each do |ct| %>
+          <p align="justify">
+            <% if ct.oftype != 'table' %>
+                <%= "#{ct.code.gsub('\n', '<br>')}".html_safe if ct.oftype == 'text' %>
+                <%= image_tag(ct.code, alt: ct.extra, data: {title: ct.title}) if ct.oftype == 'image' %>
+                <br>
+                <div class="form-inline">
+                  <%= button_to new_interaction_path(ct: ct.id, bw: current_user.id), {class: 'btn btn-default btn-lg'} do %>
+                      <span class="glyphicon glyphicon-pencil"></span>
+                  <% end %>
+
+                  <%= button_to contents_interactions_path(id: ct.id,by_who: current_user.id), {class: 'btn btn-default btn-lg'} do %>
+                      <span class="glyphicon glyphicon-list"></span>
+                  <% end %>
+                </div>
+                <br>
+                </p>
+            <% else %>
+                <%= "#{ct.code.gsub('<table>', "<table class = 'resp3-table'>")}".html_safe if ct.oftype == 'table' %>
+                <tr>
+                  <td>
+                    <div class="form-inline">
+                      <%= button_to new_interaction_path(ct: ct.id, bw: current_user.id), {class: 'btn btn-default btn-lg'} do %>
+                          <span class="glyphicon glyphicon-pencil"></span>
+                      <% end %>
+
+                      <%= button_to contents_interactions_path(id: ct.id, by_who: current_user.id), {class: 'btn btn-default btn-lg'} do %>
+                          <span class="glyphicon glyphicon-list"></span>
+                      <% end %>
+                    </div>
+                  </td>
+                </tr>
+                <br>
+            <% end %>
+      <% end %>
+  <% end %>
+</div>
+</div>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+        $('#chapters_select').change(function () {
+            $.ajax({
+                url: "<%= update_sections_path %>",
+                data: {
+                    'chapter_id': $('#chapters_select').val(),
+                    'this': 'thisiss'
+
+                },
+                dataType: "script"
+            });
+        });
+        $('#sections_select').change(function () {
+            $.ajax({
+                url: "<%= update_subsections_path %>",
+                data: {
+                    'section_id': $('#sections_select').val(),
+                    'id2': "thisis"
+
+                },
+                dataType: "script"
+            });
+        });
+        $('#subsections_select').change(function () {
+            $.ajax({
+                url: "<%= update_paragraphs_path %>",
+                data: {
+                    'subsection_id': $('#subsections_select').val(),
+                    'id2': "thisis"
+
+                },
+                dataType: "script"
+            });
+        });
+    });
+
+</script>
