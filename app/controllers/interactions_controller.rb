@@ -5,16 +5,17 @@ class InteractionsController < ApplicationController
   # GET /interactions
   # GET /interactions.json
   def index
-    if params[:ct].nil?
-    @interactions = Interaction.where(by_who: current_user.id)
-    else
-      @interactions = Content.find(:ct).interactions
-    end
+    @interactions = Interaction.where(by_who: current_user.id) if params[:ct].nil?
+    @interactions = Content.find(params[:ct]).interactions unless  params[:ct].nil?
   end
 
   # GET /interactions/1
   # GET /interactions/1.json
   def show
+  end
+
+  def user
+
   end
 
   def content
@@ -50,8 +51,13 @@ class InteractionsController < ApplicationController
   # PATCH/PUT /interactions/1
   # PATCH/PUT /interactions/1.json
   def update
+    content = Content.find(@interaction.content_id)
+    @interaction = content.interactions.where(id: @interaction.id).first
+    params2 = {}
+    params2[:content_id] = content.id
+    params2.merge(interaction_params)
     respond_to do |format|
-      if @interaction.update(interaction_params)
+      if @interaction.update(params2)
         format.html { redirect_to @interaction, notice: 'Tu comentario ha sido editado correctamente.' }
         format.json { render :show, status: :ok, location: @interaction }
       else

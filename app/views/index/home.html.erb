@@ -15,7 +15,8 @@
 
         <%= link_to('Documento', index_document_path) %>
         <br>
-
+        <%= link_to('Comentarios Realizados',interactions_path) %>
+        <br>
         <%= link_to('Cerrar sesión', destroy_user_session_path, :method => :delete) %>
         <br>
       </div>
@@ -47,10 +48,3 @@
   </div>
 </div>
 
-<script type="text/javascript">
-    $(document).ready(function(){
-        setTimeout(function(){
-            $('#flash').remove();
-        }, 500);
-    })
-</script>

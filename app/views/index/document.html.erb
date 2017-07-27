@@ -1,15 +1,24 @@
 <div align="left"><%= link_to('Regresar', index_home_path) %></div>
 <div class="container-fluid">
   <h1>Nombre del Documento: <%= @doc.name %></h1>
+  <div class="row col-sm-12 p-1 ">
+    <div class=" col-sm-12 p-1">
   <%= collection_select(:chapter_id, :chapter_id, @chapters, :id, :name, {:prompt => 'Seleccionar Cap.'}, {:id => 'chapters_select'}) %>
-  <br>
-  <%= collection_select(:section_id, :section_id, @sections, :id, :name, {:prompt => 'Seleccionar Sección.'}, {:id => 'sections_select'}) %>
+  </div>
+  </div>
 
+    <div class="row col-sm-12 p-1">
+      <div class=" col-sm-12 p-1">
+  <%= collection_select(:section_id, :section_id, @sections, :id, :name, {:prompt => 'Seleccionar Sección.'}, {:id => 'sections_select'}) %>
+    </div>
+    </div>
   <%= form_tag(index_document_path, method: :post, :name => 'subsection') do %>
-      <div class="form-inline">
-        <div class="col-md-2 p-1">
+
+        <div class="row col-sm-12 p-1">
+          <div class=" col-sm-12 p-1">
           <%= collection_select(:subsection_id, :subsection_id, @subsections, :id, :name, {:prompt => 'Seleccionar Subsección.', data: {remote: true}}, {:id => 'subsections_select'}) %>
-        </div>
+          </div>
+          </div>
         <% @h_params = [:chapter_id, :subsection_id] %>
         <div class="col-sm-12 p-1">
           <%= hidden_field_tag('hidden', @h_params) %>
@@ -31,7 +40,7 @@
                       <span class="glyphicon glyphicon-pencil"></span>
                   <% end %>
 
-                  <%= button_to interactions_path(ct: ct.id, bw: current_user.id), {class: 'btn btn-default btn-lg', method: :get} do %>
+                  <%= button_to contents_interactions_path(id: ct.id,by_who: current_user.id), {class: 'btn btn-default btn-lg'} do %>
                       <span class="glyphicon glyphicon-list"></span>
                   <% end %>
                 </div>
@@ -46,7 +55,7 @@
                           <span class="glyphicon glyphicon-pencil"></span>
                       <% end %>
 
-                      <%= button_to interactions_path(ct: ct.id, bw: current_user.id), {class: 'btn btn-default btn-lg', method: :get} do %>
+                      <%= button_to contents_interactions_path(id: ct.id, by_who: current_user.id), {class: 'btn btn-default btn-lg'} do %>
                           <span class="glyphicon glyphicon-list"></span>
                       <% end %>
                     </div>

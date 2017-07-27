@@ -1,3 +1,4 @@
+<div align="left"><%= link_to 'Regresar', index_document_path %></div>
 <h1>Añadir Comentario</h1>
 <div class="container-fluid">
     <% unless params[:ct].nil? %>
@@ -20,4 +21,4 @@
 
 <%= render 'form', interaction: @interaction %>
 
-<%= link_to 'Back', index_document_path %>
+
