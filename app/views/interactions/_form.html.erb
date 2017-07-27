@@ -1,0 +1,40 @@
+<%= form_for(interaction) do |f| %>
+    <% if interaction.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(interaction.errors.count, "error") %> prohibited this interaction from being saved:</h2>
+          <ul>
+            <% interaction.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+    <div class="container-fluid">
+      <div align="center">
+      <div class="actions">
+        <div class="row col-md-5">
+        <%= f.label :Tipo %>
+        </div>
+        <div class="row col-md-5">
+        <%= f.select :oftype,['Comentario','Observacion'] %>
+        </div>
+        <div class="row col-md-5">
+        <%= f.label :Mensaje %>
+        </div>
+        <div class="row col-md-5 p-1">
+        <%= f.text_area :msg, size: "30x5" %>
+        </div>
+          <div class="row col-md-5">
+        <%= f.hidden_field :by_who, value: current_user.id %>
+        <%= f.hidden_field :author, value: current_user.first_name %>
+         <%= f.hidden_field :content_id, value: params[:ct] %>
+          </div>
+          <div class=" row col-md-2 ">
+
+        <%= f.submit('Hacer comentario') %>
+
+          </div>
+      </div>
+    </div>
+<% end %>
+</div>
