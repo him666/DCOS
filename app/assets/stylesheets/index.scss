@@ -213,3 +213,6 @@ p{
   border: none;
 }
 
+.container{
+  @media (min-width: 768px) and (max-width: 979px){}
+}
