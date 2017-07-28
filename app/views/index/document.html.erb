@@ -27,7 +27,7 @@
       </div>
   <% end %>
 </div>
-<div class="container-fluid">
+<div class="container">
   <% unless params[:subsection_id].nil? %>
       <% Subsection.find(params[:subsection_id][:subsection_id]).contents.each do |ct| %>
           <p align="justify">
